@@ -1,13 +1,13 @@
 const initialData = {
-    trucks: []
-}
+    loading: false
+};
 
-export const truckReducer = (state=initialData, action)=>{
+export const alertReducer=(state=initialData, action)=>{
     switch (action.type) {
-      case "GET_ALL_TRUCKS": {
+      case "LOADING": {
         return {
           ...state,
-          trucks: action.payload,
+          loading: action.payload,
         };
       }
 

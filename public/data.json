@@ -1,0 +1,111 @@
+[
+  {
+    "name": "EICHER PRO 1049CT",
+    "rentPerHour": 2000,
+    "gvw": 2500,
+    "horsepower": 95,
+    "torque": 285,
+    "engine": "E483 TCI",
+    "body": "3048",
+    "brake": "Hydraulic brake",
+    "fuel": 100,
+    "image": "https://cms.eichertrucksandbuses.com/uploads/ib/exterior/30794e92fe379f3a4166006af4844cd1.jpg"
+  },
+  {
+    "name": "EICHER PRO 2055CT",
+    "rentPerHour": 7000,
+    "gvw": 16200,
+    "horsepower": 150,
+    "torque": 605,
+    "fuel": 100,
+    "engine": "CUMMINS 6BT 155 5.9 31",
+    "body": "9910",
+    "brake": "Full air S-cam Brake",
+    "image": "https://www.autosbangla.com/images/tata/tata-lpt-1615-ex2-img1.jpg"
+  },
+  {
+    "name": "EICHER PRO 1080XPT",
+    "rentPerHour": 5000,
+    "gvw": 7500,
+    "horsepower": 110,
+    "torque": 330,
+    "engine": "E483 with LDA",
+    "body": "3060",
+    "brake": "Air brake with VOSS fitting",
+    "fuel": 60,
+    "image": "https://cms.eichertrucksandbuses.com/uploads/ib/exterior/c21972a149f2af92407c7ad4989e66eb.jpg"
+  },
+  {
+    "name": "EICHER PRO 5025H",
+    "rentPerHour": 10000,
+    "gvw": 25000,
+    "horsepower": 180,
+    "torque": 685,
+    "engine": "Cummins 5.9",
+    "body": "7315",
+    "brake": "Hydraulic brake",
+    "fuel": 395,
+    "image": "https://cms.eichertrucksandbuses.com/uploads/ib/exterior/a0322109aef56494ea38f5513f574cde.jpg"
+  },
+  {
+    "name": "EICHER PRO 1095XP",
+    "rentPerHour": 8000,
+    "gvw": 10250,
+    "horsepower": 107,
+    "torque": 330,
+    "engine": "E483 with LDA",
+    "body": "4315",
+    "brake": "Dual circuit, full air 'S' cam",
+    "fuel": 190,
+    "image": "https://cms.eichertrucksandbuses.com/uploads/ib/exterior/70b9657f526614a842b98e7b4a797fe8.jpg"
+  },
+  {
+    "name": "EICHER PRO 1114XP",
+    "rentPerHour": 9000,
+    "gvw": 10900,
+    "horsepower": 115,
+    "torque": 400,
+    "engine": "E483 TCI",
+    "body": "5660",
+    "brake": "Full air dual line S cam brake",
+    "fuel": 190,
+    "image": "https://cms.eichertrucksandbuses.com/uploads/ib/exterior/b0aba409399c8afd07eefd75ea23848b.jpg"
+  },
+  {
+    "name": "EICHER TERRA 16XP",
+    "rentPerHour": 13000,
+    "gvw": 16200,
+    "horsepower": 154,
+    "torque": 570,
+    "engine": "E683 TCI",
+    "body": "8500",
+    "brake": "Hydraulic brake",
+    "fuel": 220,
+    "image": "https://cms.eichertrucksandbuses.com/uploads/ib/exterior/dbb251061a2150063f3b7f9ca3e37de3.jpg"
+  },
+  {
+    "name": "EICHER PRO 6025TM",
+    "rentPerHour": 15000,
+    "gvw": 25000,
+    "horsepower": 210,
+    "torque": 825,
+    "engine": "MDEP5",
+    "body": "Not Available",
+    "brake": "Hydraulic brake",
+    "fuel": 220,
+    "image": "https://cms.eichertrucksandbuses.com/uploads/ib/exterior/264ad971e8c1bf8c8ba8adfb2821cf19.jpg"
+  },
+  {
+    "name": "EICHER PRO 6031",
+    "rentPerHour": 18000,
+    "gvw": 31000,
+    "horsepower": 210,
+    "torque": 825,
+    "engine": "VEDX5",
+    "body": "7315",
+    "brake": "Hydraulic brake",
+    "fuel": 380,
+    "image": "https://cms.eichertrucksandbuses.com/uploads/ib/img/5a445f99395e5604e0865b590944407e.png"
+  }
+  
+]
