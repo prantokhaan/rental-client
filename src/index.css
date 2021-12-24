@@ -330,3 +330,38 @@ a{
   font-size: 14px;
   line-height: 25px;
 }
+
+.driver-area{
+  margin-bottom: 50px;
+  padding: 40px;
+  
+}
+.driver-content .text{
+  background-color: #ff6d00;
+}
+ .driver-content .img{
+  background: #EE493B;
+  border-top-right-radius: 120%;
+}
+.driver-content .img img{
+  margin-top: 30%;
+}
+.driver-content .text{
+  background: url("https://images.unsplash.com/photo-1546453436-6d08a4070088?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=994&q=80");
+  background-attachment: fixed ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 5px;
+  padding: 60px;
+  z-index: -2;
+} 
+.driver-content .text h2{
+  color: white;
+  text-shadow: 0 0 5px 5px #1F1F1F;
+  margin-left: 50px;
+  padding-right: 20px;
+  line-height: 60px;
+}
+.driver-content .text button{
+  margin-left: 50px;
+}

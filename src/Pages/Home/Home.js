@@ -5,6 +5,7 @@ import Truck from './Truck';
 import FindArea from './FindArea/FindArea';
 import About from './About/About';
 import Services from './Services/Services';
+import Driver from './Driver/Driver';
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <FindArea />
       <About />
       <Services />
+      <Driver />
     </div>
   );
 };
