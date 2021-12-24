@@ -20,7 +20,7 @@ function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
-      {/* <Header /> */}
+        {/* <Header /> */}
         <Switch>
           <Route exact path="/">
             <Home />
@@ -34,21 +34,21 @@ function App() {
           <Route exact path="/register">
             <Register />
           </Route>
-          <PrivateRoute  path="/booking/:truckId">
+          <PrivateRoute path="/booking/:truckId">
             <BookingTruck />
           </PrivateRoute>
-          <PrivateRoute  path="/userbookings">
+          <PrivateRoute path="/userbookings">
             <UserBooking />
           </PrivateRoute>
-          <PrivateRoute  path="/addTruck">
+          <AdminRoute path="/adminHome">
+            <AdminHome />
+          </AdminRoute>
+          <AdminRoute path="/addTruck">
             <AddTruck />
-          </PrivateRoute>
-          <PrivateRoute  path="/adminHome">
-            <AdminHome/>
-          </PrivateRoute>
-          <PrivateRoute  path="/editTruck/:truckId">
-            <EditTruck/>
-          </PrivateRoute>
+          </AdminRoute>
+          <AdminRoute path="/editTruck/:truckId">
+            <EditTruck />
+          </AdminRoute>
         </Switch>
         {/* <Footer /> */}
       </BrowserRouter>
@@ -71,11 +71,11 @@ export function PrivateRoute(props){
     );
   }
 }
-// export function AdminRoute(props){
-//   const user = localStorage.getItem("user");
-//   if(user?.role === "admin"){
-//     return <Route {...props} />
-//   } else {
-//     return <Redirect to="/" />
-//   }
-// }
+export function AdminRoute(props){
+  const user = JSON.parse(localStorage.getItem("user"));
+  if(user?.role === "admin"){
+    return <Route {...props} />
+  } else {
+    return <Redirect to="/" />
+  }
+}

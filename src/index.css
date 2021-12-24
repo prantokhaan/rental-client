@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif !important;
+  font-family: 'Poppins', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: azure;
@@ -14,7 +19,7 @@ code {
     monospace;
 }
 .bs1{
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  box-shadow: rgba(56, 60, 61, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 .ant-row{
   margin: 0 20 !important;
@@ -51,9 +56,8 @@ button{
   padding: 3px 10px !important;
 }
 .header{
-  padding: 10px;
-  background-color: aliceblue;
-  
+  padding: 15px 0 0 0;
+  border-bottom: 1px solid rgba(252, 249, 249, 0.24);
 }
 .header .ant-btn{
   box-shadow: none !important;
@@ -158,5 +162,171 @@ svg{
 a{
   color: orangered !important;
 }
+.header-bg{
+  background: #010009;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slider{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.slider-text{
+  margin-left: 30px;
+  margin-top: 90px;
+  z-index: 5;
+}
+.slider-text h2{
+  color: orangered;
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 50px;
+  margin-left: 5px;
+}
+.slider-text p{
+  color: white;
+  font-size: 20px;
+  text-transform: capitalize;
+  padding-right: 60%;
+}
+.slider-text p span {
+  font-weight: bold;
+  font-size: 23px;
+  color: orangered
+}
+.primary-button {
+  border: 2px double #EE493B;
+  color: white !important;
+  padding: 10px 20px !important;
+  background-color: transparent;
+  margin-top: 20px;
+  margin-left: 5px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+.primary-button:hover{
+  background-color: #EE493B;
+  border: 2px double #EE493B;
+}
+.slider-img{
+  margin-top: -27%;
+  margin-left: 37%;
+  z-index: 5;
+}
+.slider-img-2{
+  margin-top: -24%;
+  margin-left: 45%;
+  z-index: 5;
+}
+.shapes{
+  position: relative;
+  z-index: 8;
+}
 
-/* login part  */
+
+.find-area{
+  height: 200px;
+  margin-top: -10%;
+  background-color: #fff;
+  margin-bottom: 40px;
+}
+.find-title{
+  height: 200px;
+  background: #E53B2D;
+  text-align: center;
+}
+.find-title h2{
+  font-weight: bold;
+  margin-top: 15%;
+  color: #fff
+}
+.find-content{
+  text-align: center;
+  margin-top: 8%;
+}
+.secondary-button{
+  padding: 10px 20px !important;
+  background-color: #E53B2D;
+  color: white;
+  border: 2px solid #E53B2D;
+  transition: all 0.5s ease;
+}
+.secondary-button:hover{
+  background-color: transparent;
+  color: #E53B2D
+}
+
+.about-area{
+  margin-top: 8% !important;
+  text-transform: capitalize;
+  padding-bottom: 40px;
+}
+.about-area h4{
+  color: #E53B2D;
+}
+.about-area h2{
+  color: #001238;
+  font-weight: bold;
+}
+.about-area h6{
+  color: gray;
+  line-height: 25px;
+}
+.about-area .status{
+  color: gray;
+}
+.about-area .status i {
+  color: #E53B2D;
+}
+.sign-txt h4{
+  color: #001238;
+}
+
+.service-area{
+  margin-bottom: 40px;
+}
+.services{
+  margin-left: -20px;
+}
+.service-title h4{
+  color: #E53B2D;
+}
+.service-title h2{
+  color: #001238;
+  font-weight: bold;
+  font-size: 40px;
+}
+.service{
+  margin-top: 30px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.281);
+  margin-right: 20px;
+}
+.service i{
+  font-size: 40px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  color: #E53B2D;
+}
+.service h2{
+  color: #20272e5e;
+  font-family: 'Oswald', sans-serif;
+  text-align: right;
+  font-size: 40px;
+}
+.service h3{
+  color: #001238;
+  font-size: 25px;
+  font-weight: bolder;
+}
+.service h3:hover{
+  color: #E53B2D;
+}
+.service h6{
+  color: gray;
+  font-size: 14px;
+  line-height: 25px;
+}
