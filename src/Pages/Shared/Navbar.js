@@ -2,7 +2,7 @@ import React from "react";
 import { Menu, Dropdown, Button, Space, Row, Col, Divider } from "antd";
 import { Link } from "react-router-dom";
 
-const Header = (props) => {
+const Navbar = (props) => {
   const user = JSON.parse(localStorage.getItem("user"));
   console.log(user);
   const menu = (
@@ -33,7 +33,7 @@ const Header = (props) => {
     </Menu>
   );
   return (
-    <div>
+    <div className="header-bg">
       <div className="header bs1">
         <Row gutter={16} justify="center">
           <Col lg={20} sm={24} xs={24}>
@@ -78,4 +78,4 @@ const Header = (props) => {
   );
 };
 
-export default Header;
+export default Navbar;

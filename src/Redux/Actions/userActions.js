@@ -15,7 +15,7 @@ export const userLogin = (reqObj) => async (dispatch) => {
     setTimeout(() => {
       const user = JSON.parse(localStorage.getItem("user"));
       if(user?.role === "admin"){
-        window.location.href = "/adminHome";
+        window.location.href = "/rent";
       }else{
         window.location.href = "/";
       }

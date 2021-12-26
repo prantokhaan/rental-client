@@ -244,11 +244,12 @@ a{
   text-align: center;
   margin-top: 8%;
 }
+
 .secondary-button{
   padding: 10px 20px !important;
   background-color: #E53B2D;
   color: white;
-  border: 2px solid #E53B2D;
+  border: 2px double #E53B2D;
   transition: all 0.5s ease;
 }
 .secondary-button:hover{
@@ -364,4 +365,30 @@ a{
 }
 .driver-content .text button{
   margin-left: 50px;
+}
+
+
+/* rent part  */
+.rent{
+  padding-bottom: 50px;
+}
+.link-button{
+  background-color: transparent;
+  border: 2px double #E53B2D;
+  font-size: 18px;
+  padding: 10px 15px;
+
+}
+.link-button button{
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+
+}
+.active{
+  background-color: #E53B2D;
+  color: white;
+}
+.active button{
+  color: white;
 }

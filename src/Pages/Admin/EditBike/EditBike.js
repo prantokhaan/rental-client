@@ -2,32 +2,32 @@ import { Col, Row, Form, Input } from "antd";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { addTruck, editTruck, deleteTruck } from "../../../Redux/Actions/truckActions";
-import { getAllTrucks } from "../../../Redux/Actions/truckActions";
+import { addBike, editBike, deleteBike } from "../../../Redux/Actions/bikeActions";
+import { getAllBikes } from "../../../Redux/Actions/bikeActions";
 import Header from "../../Shared/Header";
 import Spinner from "../../Shared/Spinner";
 
-const EditTruck = () => {
-  const { trucks } = useSelector((state) => state.truckReducer);
+const EditBike = () => {
+  const { bikes } = useSelector((state) => state.bikeReducer);
   const dispatch = useDispatch();
   const { loading } = useSelector((state) => state.alertReducer);
-  const [truck, setTruck] = useState();
-  const [totalTrucks, setTotalTrucks] = useState([]);
-  const {truckId} = useParams()
+  const [bike, setBike] = useState();
+  const [totalBikes, setTotalBikes] = useState([]);
+  const { bikeId } = useParams();
   useEffect(() => {
-    if (trucks.length == 0) {
-      dispatch(getAllTrucks());
+    if (bikes.length == 0) {
+      dispatch(getAllBikes());
     } else {
-      setTotalTrucks(trucks);
-      setTruck(trucks.find((o) => o._id == truckId));
-      console.log(truck);
+      setTotalBikes(bikes);
+      setBike(bikes.find((o) => o._id == bikeId));
+      console.log(bike);
     }
-  }, [trucks]);
+  }, [bikes]);
 
   function onFinish(values) {
-    values._id = truck._id;
+    values._id = bike._id;
 
-    dispatch(editTruck(values));
+    dispatch(editBike(values));
     console.log(values);
   }
 
@@ -36,9 +36,9 @@ const EditTruck = () => {
       {loading && <Spinner />}
       <Row justify="center mt-5">
         <Col lg={12} sm={24} xs={24} className="p-2">
-          {totalTrucks.length > 0 && (
+          {totalBikes.length > 0 && (
             <Form
-              initialValues={truck}
+              initialValues={bike}
               className="bs1 p-2"
               layout="vertical"
               onFinish={onFinish}
@@ -123,4 +123,4 @@ const EditTruck = () => {
   );
 };
 
-export default EditTruck;
+export default EditBike;

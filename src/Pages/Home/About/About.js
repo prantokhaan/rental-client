@@ -31,13 +31,13 @@ const About = () => {
               </div>
             </div>
             <div className="row sign mt-3">
-                <div className="col-md-6 sign-img">
-                    <img src={sign} alt="" />
-                </div>
-                <div className="col-md-6 sign-txt mt-5">
-                    <h4>Ismatul Islam Pranto</h4>
-                    <h6>CEO & Founder</h6>
-                </div>
+              <div className="col-md-6 sign-img">
+                <img src={sign} alt="" />
+              </div>
+              <div className="col-md-6 sign-txt mt-5">
+                <h4>Ismatul Islam Pranto</h4>
+                <h6>CEO & Founder</h6>
+              </div>
             </div>
           </div>
           <div className="col-md-6">

@@ -17,6 +17,40 @@ export const bookTruck = (reqObj) => async (dispatch) => {
     message.error("Something went wrong , please try later");
   }
 };
+export const bookCar = (reqObj) => async (dispatch) => {
+  dispatch({ type: "LOADING", payload: true });
+
+  try {
+    await axios.post("http://localhost:5000/bookings/bookCar", reqObj);
+
+    dispatch({ type: "LOADING", payload: false });
+    message.success("Your Car booked successfully");
+    setTimeout(() => {
+      window.location.href = "/userbookings";
+    }, 500);
+  } catch (error) {
+    console.log(error);
+    dispatch({ type: "LOADING", payload: false });
+    message.error("Something went wrong , please try later");
+  }
+};
+export const bookBike = (reqObj) => async (dispatch) => {
+  dispatch({ type: "LOADING", payload: true });
+
+  try {
+    await axios.post("http://localhost:5000/bookings/bookBike", reqObj);
+
+    dispatch({ type: "LOADING", payload: false });
+    message.success("Your Bike booked successfully");
+    setTimeout(() => {
+      window.location.href = "/userbookings";
+    }, 500);
+  } catch (error) {
+    console.log(error);
+    dispatch({ type: "LOADING", payload: false });
+    message.error("Something went wrong , please try later");
+  }
+};
 
 export const getAllBookings = () => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });

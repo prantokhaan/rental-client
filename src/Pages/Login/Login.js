@@ -28,7 +28,7 @@ const Login = () => {
             src="https://cdn.pixabay.com/photo/2017/06/27/18/18/isolated-2448337_960_720.png"
           />
           <div className="text-center pt-5">
-            <h1 className="login-logo">Truck Lagbe?</h1>
+            <h1 className="login-logo"></h1>
           </div>
         </Col>
         <Col lg={8} className="text-left p-5">

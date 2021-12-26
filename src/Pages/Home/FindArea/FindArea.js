@@ -23,7 +23,7 @@ const FindArea = () => {
                   />
                 </div>
                 <div className="col-md-4 find-button">
-                  <Link to="/">
+                  <Link to="/rent">
                     <button className="secondary-button">Find Cars</button>
                   </Link>
                 </div>

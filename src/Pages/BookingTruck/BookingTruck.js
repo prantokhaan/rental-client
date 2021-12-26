@@ -10,10 +10,15 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import { getAllCars } from "../../Redux/Actions/carActions";
+import { getAllBikes } from "../../Redux/Actions/bikeActions";
 const { RangePicker } = DatePicker;
 
 const BookingTruck = ({ match }) => {
   const { trucks } = useSelector((state) => state.truckReducer);
+  const { cars } = useSelector((state) => state.carReducer);
+  const { bikes } = useSelector((state) => state.bikeReducer);
+
   const { loading } = useSelector((state) => state.alertReducer);
   const [truck, setTruck] = useState({});
   const dispatch = useDispatch();
@@ -24,14 +29,18 @@ const BookingTruck = ({ match }) => {
   const [totalAmount, setTotalAmount] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const { truckId } = useParams();
+  const [coupon, setCoupon] = useState("");
+  const [discount, setDiscount] = useState(0);
 
   useEffect(() => {
-    if (trucks.length === 0) {
+    if (trucks.length === 0 || cars.length === 0 || bikes.length === 0) {
       dispatch(getAllTrucks());
+      dispatch(getAllCars());
+      dispatch(getAllBikes());
     } else {
-      setTruck(trucks.find((o) => o._id == truckId));
+      setTruck(trucks.find((o) => o._id == truckId) || cars.find(o => o._id == truckId || bikes.find(o => o._id == truckId)));
     }
-  }, [trucks]);
+  }, [trucks, cars, bikes]);
 
   useEffect(() => {
     setTotalAmount(totalHours * truck.rentPerHour);
@@ -63,8 +72,18 @@ const BookingTruck = ({ match }) => {
 
     dispatch(bookTruck(reqObj));
   }
+  const handleInput = (e) => {
+    const input = e.target.value;
+    setCoupon(input)
+  }
+  const handleDiscount = (e) => {
+    if(coupon === "newuser"){
+      setTotalAmount(totalAmount - totalAmount * 0.1)
+      setDiscount(totalAmount * 0.1)
+    }
+  }
   return (
-    <Header>
+    <div>
       {loading && <Spinner />}
       <Row
         justify="center"
@@ -81,15 +100,38 @@ const BookingTruck = ({ match }) => {
           />
         </Col>
 
-        <Col lg={10} sm={24} xs={24} className="text-right">
+        <Col lg={10} sm={24} xs={24} className="text-right mt-5 pb-5">
           <Divider type="horizontal" dashed>
-            Car Info
+            Truck Info
           </Divider>
-          <div style={{ textAlign: "right" }}>
-            <p>{truck.name}</p>
-            <p>{truck.rentPerHour} Rent Per hour /-</p>
-            <p>GVW : {truck.gvw} kg</p>
-            <p>Horsepower : {truck.horsepower} hp</p>
+          <div style={{ textAlign: "center" }}>
+            <h2>{truck.name}</h2>
+            <h5>
+              <span className="fw-bold">{truck.rentPerHour}$</span> Rent Per
+              hour
+            </h5>
+            <h5>
+              <span className="fw-bold">{truck.engine}</span>
+            </h5>
+            <Divider />
+            <h6>
+              GVW : <strong>{truck.gvw} KG</strong>
+            </h6>
+            <h6>
+              Horsepower : <strong>{truck.horsepower} HP</strong>
+            </h6>
+            <h6>
+              Torque : <strong>{truck.torque} NM</strong>
+            </h6>
+            <h6>
+              Body Length : <strong>{truck.body} CM</strong>
+            </h6>
+            <h6>
+              Brake Type : <strong>{truck.brake}</strong>
+            </h6>
+            <h6>
+              Fuel Capacity : <strong>{truck.fuel} Ltr</strong>
+            </h6>
           </div>
 
           <Divider type="horizontal" dashed>
@@ -117,7 +159,7 @@ const BookingTruck = ({ match }) => {
               <p>
                 Rent Per Hour : <b>{truck.rentPerHour}</b>
               </p>
-              
+
               <Checkbox
                 onChange={(e) => {
                   if (e.target.checked) {
@@ -129,8 +171,33 @@ const BookingTruck = ({ match }) => {
               >
                 Driver Required
               </Checkbox>
-
-              <h3>Total Amount : {totalAmount}</h3>
+              <div className="mb-3">
+                <input
+                  type="text"
+                  className="p-2"
+                  style={{ border: "2px solid orangered" }}
+                  onBlur={handleInput}
+                />
+                {discount === 0 ? (
+                  <button
+                    onClick={handleDiscount}
+                    className="secondary-button ms-2"
+                  >
+                    Apply
+                  </button>
+                ) : (
+                  <button
+                    disabled
+                    className="secondary-button ms-2"
+                  >
+                    Apply
+                  </button>
+                )}
+              </div>
+              <h3>
+                Total Amount :{" "}
+                <span style={{ color: "orangered" }}>{totalAmount}</span>
+              </h3>
 
               <StripeCheckout
                 shippingAddress
@@ -175,7 +242,7 @@ const BookingTruck = ({ match }) => {
           </Modal>
         )}
       </Row>
-    </Header>
+    </div>
   );
 };
 

@@ -33,7 +33,7 @@ const Banner = () => {
                 Choose your car now and get instant <span>10%</span> off on
                 every bike.
               </p>
-              <Link to="/">
+              <Link to="/rent">
                 <button className="primary-button">Rent Now</button>
               </Link>
             </div>
@@ -49,7 +49,7 @@ const Banner = () => {
                 Choose your car now and get instant <span>10%</span> off on
                 every car.
               </p>
-              <Link to="/">
+              <Link to="/rent">
                 <button className="primary-button">Rent Now</button>
               </Link>
             </div>
@@ -65,7 +65,7 @@ const Banner = () => {
                 Choose your car now and get instant <span>10%</span> off on
                 every truck.
               </p>
-              <Link to="/">
+              <Link to="/rent">
                 <button className="primary-button">Rent Now</button>
               </Link>
             </div>

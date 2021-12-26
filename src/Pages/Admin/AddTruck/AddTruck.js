@@ -19,7 +19,7 @@ const AddTruck = () => {
     }
 
     return (
-      <Header>
+      <div>
         {loading && <Spinner />}
         <Row justify="center mt-5">
           <Col lg={12} sm={24} xs={24} className="p-2">
@@ -103,12 +103,12 @@ const AddTruck = () => {
               </Form.Item>
 
               <div className="text-right">
-                <button className="btn1">ADD CAR</button>
+                <button className="btn1">ADD TRUCK</button>
               </div>
             </Form>
           </Col>
         </Row>
-      </Header>
+      </div>
     );
     }
 

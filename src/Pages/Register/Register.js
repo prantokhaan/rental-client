@@ -70,7 +70,7 @@ const Register = () => {
             data-aos-duration="1500"
             src="https://cdn.pixabay.com/photo/2020/11/14/13/18/truck-5741662_960_720.png"
           />
-          <h1 className="register-logo">Truck Lagbe?</h1>
+          <h1 className="register-logo"></h1>
         </Col>
       </Row>
     </div>
